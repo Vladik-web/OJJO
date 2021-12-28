@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: "Gilroy";
+  font-weight: 400;
+  font-size: 18px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 15px;
+}
+.btn-reset {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 0;
+}
+.btn-deff {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  padding: 15px 35px;
+  border: 1px solid;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.first-head {
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 140%;
+  margin-bottom: 15px;
+  color: #333333;
+}
+.title {
+  text-align: center;
+  font-family: "Noto";
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  margin-bottom: 60px;
+  color: #333333;
+}

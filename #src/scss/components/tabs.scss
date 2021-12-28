@@ -1,0 +1,124 @@
+.tabs {
+  padding: 100px 0 120px;
+  &__inner {
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 61px;
+    & .btn {
+      cursor: pointer;
+      background-color: #f9f9f9;
+      flex: 0 1 165px;
+      height: 55px;
+
+      text-decoration: none;
+      color: $accent;
+      border: 1px solid #d6d6d6;
+      font-weight: 500;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative;
+      transition: 0.2s ease;
+      top: 0px;
+      left: 0px;
+      &.active {
+        top: 5px;
+        left: 5px;
+        background-color: rgba(51, 51, 51, 1);
+        color: white;
+        &::after {
+          top: -1px;
+          left: -1px;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #d6d6d6;
+        top: 5px;
+        left: 5px;
+        transition: 0.2s ease;
+      }
+      &:hover {
+        transition: 0.2s ease;
+        background-color: rgba(51, 51, 51, 1);
+        color: white;
+      }
+      &:active {
+        top: 5px;
+        left: 5px;
+        &::after {
+          top: -1px;
+          left: -1px;
+        }
+      }
+    }
+  }
+  &__contents {
+  }
+  &__content {
+    display: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0;
+    gap: 30px;
+    &.active {
+      display: flex;
+    }
+    &-item {
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      flex: 0 1 350px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      span {
+        transition: 0.2s ease;
+        color: $white;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::before {
+        transition: 0.2s ease;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        transform: translateY(20%);
+        background: $overlay;
+      }
+      &:hover {
+        span {
+          bottom: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+        &::before {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
