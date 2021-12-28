@@ -72,6 +72,10 @@
     flex-wrap: wrap;
     font-size: 0;
     gap: 30px;
+    & > h2 {
+      text-align: center;
+      font-size: initial;
+    }
     &.active {
       display: flex;
     }
