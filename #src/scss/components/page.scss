@@ -7,4 +7,7 @@
   flex-direction: column;
   justify-content: space-between;
   background: url(../img/bgc.jpg) no-repeat center center / cover;
+  @media (max-width: 1023px) {
+    min-height: 800px;
+  }
 }

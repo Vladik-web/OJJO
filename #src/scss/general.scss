@@ -78,6 +78,11 @@ body {
       transform: scale(0.9);
     }
   }
+  @media (max-width: 424px) {
+    padding: 10px 30px;
+    font-size: 15px;
+    letter-spacing: 0;
+  }
 }
 .first-head {
   display: block;

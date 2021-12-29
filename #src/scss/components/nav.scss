@@ -1,14 +1,58 @@
 .nav {
+  transition: 0.5s linear;
+  @media (max-width: 1150px) {
+    position: absolute;
+    right: 15px;
+
+    top: 75px;
+    height: 0;
+    width: calc(50% - 30px);
+    overflow: hidden;
+  }
+  &.active {
+    height: 100%;
+  }
+  @media (max-width: 1023px) {
+    top: 100px;
+    width: calc(100% - 30px);
+  }
   ul {
     display: flex;
     column-gap: 60px;
+    @media (max-width: 1279px) {
+      column-gap: 40px;
+    }
+    @media (max-width: 1150px) {
+      flex-direction: column;
+      background-color: $white;
+      padding: 20px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 100;
+        top: -16px;
+        right: 3px;
+        border: 7px solid transparent;
+        border-bottom: 10px solid $white;
+      }
+    }
     li {
       position: relative;
+      @media (max-width: 1150px) {
+        border-bottom: 1px solid $accent;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
       a {
         font-weight: normal;
         font-size: 14px;
         line-height: 150%;
         color: $white;
+        @media (max-width: 1150px) {
+          color: $accent;
+        }
       }
       &::before {
         content: "";

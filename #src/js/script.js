@@ -15,3 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+const nav = document.querySelector(".nav");
+const menuWrapper = document.querySelector(".menu-wrapper");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+menuWrapper.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("animate");
+  nav.classList.toggle("active");
+});
