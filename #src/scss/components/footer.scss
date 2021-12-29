@@ -6,7 +6,11 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
     gap: 30px;
+    @media (max-width: 1023px) {
+      flex-wrap: wrap;
+    }
   }
   &__item {
     flex: 1 1 25%;
@@ -118,6 +122,12 @@
         }
       }
     }
+    @media (max-width: 1023px) {
+      flex: 1 1 45%;
+    }
+    @media (max-width: 550px) {
+      flex: 1 1 100%;
+    }
   }
   &__bottom {
     padding: 20px 0;
@@ -125,11 +135,16 @@
     ul {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       li {
         &:last-child {
           padding: 0 3px 2px 0;
           border-bottom: 2px solid $accent;
         }
+      }
+      @media (max-width: 680px) {
+        row-gap: 20px;
+        flex-direction: column-reverse;
       }
     }
   }

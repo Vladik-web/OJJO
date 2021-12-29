@@ -27,6 +27,9 @@ body {
   font-family: "Gilroy";
   font-weight: 400;
   font-size: 18px;
+  &.active {
+    overflow: hidden;
+  }
 }
 .container {
   margin: 0 auto;
@@ -92,6 +95,10 @@ body {
   line-height: 140%;
   margin-bottom: 15px;
   color: #333333;
+  @media (max-width: 767px) {
+    font-size: 18px;
+    margin-bottom: 9px;
+  }
 }
 .title {
   text-align: center;
@@ -101,4 +108,8 @@ body {
   line-height: 41px;
   margin-bottom: 60px;
   color: #333333;
+  @media (max-width: 767px) {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
 }
