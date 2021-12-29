@@ -1,13 +1,29 @@
 .nav {
   ul {
     display: flex;
-    column-gap: 40px;
+    column-gap: 60px;
     li {
+      position: relative;
       a {
         font-weight: normal;
         font-size: 14px;
         line-height: 150%;
         color: $white;
+      }
+      &::before {
+        content: "";
+        transition: 0.2s ease;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 0%;
+        height: 1px;
+        background-color: $white;
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+        }
       }
     }
   }
